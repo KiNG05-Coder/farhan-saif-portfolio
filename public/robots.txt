@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farhansaifportfolio.vercel.app/sitemap-index.xml

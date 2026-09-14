@@ -1,0 +1,54 @@
+---
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  as?: 'h2' | 'h3';
+  align?: 'start' | 'center';
+  id?: string;
+}
+
+const { eyebrow, title, lead, as = 'h2', align = 'start', id } = Astro.props;
+const Tag = as;
+---
+
+<header class:list={['sh', `sh--${align}`]} id={id} data-reveal>
+  {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+  <Tag class="sh__title">{title}</Tag>
+  {lead && <p class="sh__lead text-muted">{lead}</p>}
+</header>
+
+<style>
+  .sh {
+    display: grid;
+    gap: 0.9rem;
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+  .sh--center {
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 42rem;
+  }
+  .sh__title {
+    font-size: clamp(1.8rem, 4.4vw, 2.75rem);
+    letter-spacing: -0.025em;
+    color: var(--text);
+  }
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .sh__title {
+      background: linear-gradient(
+        180deg,
+        var(--text),
+        color-mix(in srgb, var(--text) 72%, var(--text-muted))
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  .sh__lead {
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    max-width: 48ch;
+  }
+</style>

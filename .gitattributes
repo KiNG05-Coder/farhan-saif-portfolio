@@ -1,0 +1,21 @@
+# Line endings:
+#   - Normalise to LF inside the repo.
+#   - Check out with the platform's native endings (CRLF on Windows),
+#     so files open correctly in every editor, including Notepad.
+* text=auto
+
+# Always LF (parsers / CI that dislike CRLF):
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.sh   text eol=lf
+
+# Binary — never touch:
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.mp4   binary
+*.woff  binary
+*.woff2 binary
