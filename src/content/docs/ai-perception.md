@@ -22,7 +22,7 @@ detector, chosen so that it can run on **Raspberry Pi 4** hardware.
 
 ## Model
 
-The planned detector is **YOLOv8n**, or another lightweight YOLO model depending
+The planned detector is **YOLO26n**, or another lightweight YOLO model depending
 on benchmarking. Target classes are configurable and may include **humans**,
 **trash**, **cans** and other environmental objects.
 
@@ -31,7 +31,7 @@ on benchmarking. Target classes are configurable and may include **humans**,
 The Raspberry Pi 4 is CPU-only — there is no GPU or accelerator — so inference
 speed is limited. The intended deployment uses:
 
-- **YOLOv8n** — the smallest standard YOLOv8 model.
+- **YOLO26n** — the smallest planned YOLO26 model.
 - **NCNN** — an inference build suited to ARM CPUs.
 - **Reduced input resolution** — smaller frames cost less to process.
 
