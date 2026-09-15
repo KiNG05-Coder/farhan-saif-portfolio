@@ -67,8 +67,8 @@ export const concepts: Concept[] = [
     summary:
       'A real-time object-detection model planned for spotting people, trash and other configurable objects.',
     detail:
-      "ARGUS-6's perception is planned around YOLOv8n, or another lightweight YOLO variant depending on benchmarking, chosen specifically because it can run without a GPU or accelerator.",
-    reference: 'Ultralytics YOLOv8n.',
+      "ARGUS-6's perception is planned around YOLO26n, or another lightweight YOLO variant depending on benchmarking, chosen specifically because it can run without a GPU or accelerator.",
+    reference: 'Planned: YOLO26n.',
   },
   {
     term: 'NCNN',
